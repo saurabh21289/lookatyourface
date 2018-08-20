@@ -6,13 +6,13 @@ def say_hello(username = "World"):
 
 # some bits of text for the page.
 header_text = '''
-    <html>\n<head> <title>EB Flask Test</title> </head>\n<body>'''
+    <html>\n<head> <title>#lookatyourface</title> </head>\n<body>'''
 instructions = '''
     <p><em>Hint</em>: This is a RESTful web service! Append a username
     to the URL (for example: <code>/Thelonious</code>) to say hello to
     someone specific.</p>\n'''
 home_link = '<p><a href="/">Back</a></p>\n'
-footer_text = '</body>\n</html>'
+footer_text = '</body><img src="static/wip.png" alt="Work in progress" width="500"></html>'
 
 # EB looks for an 'application' callable by default.
 application = Flask(__name__)
@@ -30,5 +30,5 @@ application.add_url_rule('/<username>', 'hello', (lambda username:
 if __name__ == "__main__":
     # Setting debug to True enables debug output. This line should be
     # removed before deploying a production app.
-    application.debug = True
+    # application.debug = True
     application.run()
