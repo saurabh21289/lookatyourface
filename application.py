@@ -6,7 +6,7 @@ application = Flask(__name__)
 # a route where we will display a welcome message via an HTML template
 @application.route("/")
 def hello():
-    message = "(Currently under development)"
+    message = "v0.1"
     return render_template('index.html', message=message)
 
 @application.route("/privacy")
