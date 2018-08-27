@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>#lookatyourface Test Page - HD Capture {{message}}</title>
+	<title>#lookatyourface</title>
 	<style type="text/css">
 		body { font-family: Helvetica, sans-serif; }
 		h2, h3 { margin-top:0; }
@@ -13,9 +13,19 @@
 	</style>
 </head>
 <body>
-	<h1>#lookatyourface Test Page - HD Capture {{message}}</h1>
-	<h3>Demonstrates 720p HD capture (1280x720), if your camera supports it!</h3>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1&appId=1633470833447779&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 
+	<h1>#lookatyourface HD Mirror {{message}}</h1>
+	<h3>Don't have a mirror at home? Don't despair, just #lookatyourface</h3>
+  <div class="fb-like" data-href="https://www.facebook.com/Lookatyourface-267563734083360/?ref=br_rs" data-width="400" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+  <hr>
 	<div id="my_camera"></div>
 
 	<!-- First, include the Webcam.js JavaScript Library -->
@@ -38,7 +48,7 @@
 
 	<!-- A button for taking snaps -->
 	<form>
-		<input type=button value="Take HD Snapshot" onClick="take_snapshot()">
+		<input type=button value="Take HD Photograph" onClick="take_snapshot()">
 	</form>
 
 	<!-- Code to handle taking the snapshot and displaying it locally -->
